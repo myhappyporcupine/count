@@ -1,3 +1,28 @@
+themes = {
+	evil    : { background: 'black',
+	             foreground: 'red'           },
+	good    : { background: 'lavenderblush',
+	            foreground: 'steelblue'      },
+	hacker  : { background: 'black',
+	            foreground: 'lime'           },
+	regular : { background: 'white',
+	            foreground: 'black'          },
+	aquatic : { background: 'aqua',
+	            foreground: 'white'          },
+	lusty   : { background: 'maroon',
+	            foreground: 'black'          },
+	filthy  : { background: 'yellow',
+	            foreground: 'lime'           } };
+
+adjectives = [];
+for (theme in themes) { adjectives.push(theme) };
+
+things = [
+	'robots', 'yogurts', 'human beings', 'pictish warriors', 'puppies',
+	'ping pong balls', 'hard-boiled eggs', 'git commits', 'things',
+	'rubs around the ear', 'concussions'
+];
+
 function getNumber() {
 	const numberElement = document.getElementById('number');
 	const numberTextContent = numberElement.textContent;
@@ -16,33 +41,32 @@ function incrementNumber() {
 	setNumber(newNumber);
 }
 
-function addComment(commentString) {
-	const commentParagraph = document.createElement('p');
-	commentParagraph.textContent = commentString;
-	const commentsDiv = document.getElementById('comments');
-	commentsDiv.appendChild(commentParagraph);
+function changeTheme(themeName) {
+	const themeObject = themes[themeName];
+	document.body.style.backgroundColor = themeObject.background;
+	document.body.style.color = themeObject.foreground;
 }
 
-const comments = [
-	{text: 'This counts numbers...', time: 5},
-	{text: 'Look at it go!', time: 12},
-	{text: 'What do you think it\'s counting?', time: 22},
-	{text: 'What?', time: 28},
-];
+function setThing(newThing) {
+	const thingElement = document.getElementById('thing');
+	thingElement.textContent = newThing;
+}
 
-function timeComments() {
-	const time = getNumber();
-	for (comment of comments) {
-		if (comment.time == time) {
-			const commentText = comment.text;
-			addComment(commentText);
-		}
-	}
+function countThing(number) {
+	const adjectiveIndex = Math.floor(Math.random() * adjectives.length);
+	const adjective = adjectives[adjectiveIndex];
+	const thingIndex = Math.floor(Math.random() * things.length);
+	const thing = things[thingIndex];
+	const count = number + ' ' + adjective + ' ' + thing;
+
+	changeTheme(adjective);
+	setThing(count);
 }
 
 function step() {
 	incrementNumber();
-	timeComments();
+	const number = getNumber();
+	if (number % 5 == 0) { countThing(number); }
 }
 
 setInterval(step, 1000);
