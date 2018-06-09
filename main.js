@@ -1,34 +1,35 @@
 themes = {
-	evil    : { background: 'black',
-	             foreground: 'red'           },
-	good    : { background: 'lavenderblush',
-	            foreground: 'steelblue'      },
-	hacker  : { background: 'black',
-	            foreground: 'lime'           },
-	regular : { background: 'white',
-	            foreground: 'black'          },
-	aquatic : { background: 'aqua',
-	            foreground: 'white'          },
-	lusty   : { background: 'maroon',
-	            foreground: 'black'          },
-	filthy  : { background: 'yellow',
-	            foreground: 'lime'           },
-	sunny   : { background: 'lightyellow',
-                foreground: 'cadetblue'          },
-        wizarding : { background: 'darkslateblue',
-                foreground: 'darkgoldenrod'      },
-   	joyous  : { background: 'lightpink',
-                foreground: 'orangered'          },
-  	ritualistic: { background: 'forestgreen', 
-                   foreground: 'saddlebrown'     } };
+	evil        : { background: 'black',
+	                foreground: 'red'            },
+	good        : { background: 'lavenderblush',
+	                foreground: 'steelblue'      },
+	hacker      : { background: 'black',
+	                foreground: 'lime'           },
+	regular     : { background: 'white',
+	                foreground: 'black'          },
+	aquatic     : { background: 'aqua',
+	                foreground: 'white'          },
+	lusty       : { background: 'maroon',
+	                foreground: 'black'          },
+	filthy      : { background: 'yellow',
+	                foreground: 'lime'           },
+	sunny       : { background: 'lightyellow',
+                        foreground: 'cadetblue'      },
+        wizarding   : { background: 'darkslateblue',
+                        foreground: 'darkgoldenrod'  },
+   	joyous      : { background: 'lightpink',
+                        foreground: 'orangered'      },
+  	ritualistic : { background: 'forestgreen', 
+                        foreground: 'saddlebrown'    } };
 
 adjectives = [];
-for (theme in themes) { adjectives.push(theme) };
+for (theme in themes) { adjectives.push(theme); }
 
 things = [
 	'robots', 'yogurts', 'human beings', 'pictish warriors', 'puppies',
 	'ping pong balls', 'hard-boiled eggs', 'git commits', 'things',
-	'rubs around the ear', 'concussions', 'cats', 'wizards', 'teleports', 'tube-maps', 'sandy beaches', 'salad bowls'
+	'rubs around the ear', 'concussions', 'cats', 'wizards', 'teleports',
+	'tube-maps', 'sandy beaches', 'salad bowls'
 ];
 
 function getNumber() {
