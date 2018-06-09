@@ -12,7 +12,15 @@ themes = {
 	lusty   : { background: 'maroon',
 	            foreground: 'black'          },
 	filthy  : { background: 'yellow',
-	            foreground: 'lime'           } };
+	            foreground: 'lime'           },
+	sunny   : { background: 'lightyellow',
+                foreground: 'cadetblue'          },
+        wizarding : { background: 'darkslateblue',
+                foreground: 'darkgoldenrod'      },
+   	joyous  : { background: 'lightpink',
+                foreground: 'orangered'          },
+  	ritualistic: { background: 'forestgreen', 
+                   foreground: 'saddlebrown'     } };
 
 adjectives = [];
 for (theme in themes) { adjectives.push(theme) };
@@ -20,7 +28,7 @@ for (theme in themes) { adjectives.push(theme) };
 things = [
 	'robots', 'yogurts', 'human beings', 'pictish warriors', 'puppies',
 	'ping pong balls', 'hard-boiled eggs', 'git commits', 'things',
-	'rubs around the ear', 'concussions'
+	'rubs around the ear', 'concussions', 'cats', 'wizards', 'teleports', 'tube-maps', 'sandy beaches', 'salad bowls'
 ];
 
 function getNumber() {
